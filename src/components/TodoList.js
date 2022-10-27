@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
-import { map as lodash_map} from 'lodash/map';
+import React, { useCallback } from 'react';
+import { default as lodash_map} from 'lodash/map';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem, setText } from '../store';
 import { TodoItem } from './TodoItem';

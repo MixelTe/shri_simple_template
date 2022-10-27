@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,6 +14,6 @@ ReactDOM.render(
         <Provider store={store} >
             <Application />
         </Provider>
-    </BrowserRouter>, 
+    </BrowserRouter>,
     document.getElementById('root')
 );

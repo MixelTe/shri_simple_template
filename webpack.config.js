@@ -1,20 +1,27 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StatoscopePlugin = require('@statoscope/webpack-plugin').default;
+const ProvidePlugin = require('webpack').ProvidePlugin;
 
 const config = {
-    mode: "production",
+    mode: "development",
     target: "web",
     entry: {
+        index: "./src/index.js",
         about: './src/pages/About.js',
         home: './src/pages/Home.js',
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+        }),
         new StatoscopePlugin({
             saveStatsTo: 'stats.json',
             saveOnlyStats: false,
             open: false,
+        }),
+        new ProvidePlugin({
+            process: 'process/browser',
         }),
     ],
     output: {
@@ -48,7 +55,7 @@ const config = {
         },
         extensions: ['.tsx', '.ts', '.js'],
         alias: {
-            "bn.js": false,
+            // "bn.js": false,
             // isarray: path.join(
             //     paths.MONOREPO_ROOT,
             //     "node_modules/buffer/node_modules/isarray/index.js"

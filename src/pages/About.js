@@ -1,4 +1,7 @@
-export const About = () => {
+import React from 'react';
+
+export const About = () =>
+{
     return (
         <>
             <h1 data-testid="page-title">About</h1>
