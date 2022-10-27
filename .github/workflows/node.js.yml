@@ -10,7 +10,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -19,8 +19,13 @@ jobs:
           node-version: '15.x'
       - name: Install dependencies
         run: npm ci
-      - run: npm run lint:js
-      - run: npm run lint:css
-      - run: npm run build --if-present
-      - run: npm test
-      - run: npm deploy
+      - name: Run lint:js
+        run: npm run lint:js
+      - name: Run lint:css
+        run: npm run lint:css
+      - name: Build
+        run: npm run build --if-present
+      - name: Test
+        run: npm test
+      - name: Deploy
+        run: npm run deploy
