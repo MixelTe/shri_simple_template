@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
-import lodash from 'lodash';
+import { useCallback } from 'react';
+import { map as lodash_map} from 'lodash/map';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem, setText } from '../store';
 import { TodoItem } from './TodoItem';
@@ -25,7 +25,7 @@ export const TodoList = () => {
                 <button data-testid="button-add" onClick={onClick}>Добавить</button>
             </div>
             <div data-testid="list" className="list">
-                {lodash.map(items, (text, i) => <TodoItem key={i} index={i} />)}
+                {lodash_map(items, (text, i) => <TodoItem key={i} index={i} />)}
             </div>
         </div>
     );
