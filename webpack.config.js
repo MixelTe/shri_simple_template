@@ -6,7 +6,7 @@ const config = {
     mode: "production",
     target: "web",
     entry: {
-        about: './src/pages/About.js', 
+        about: './src/pages/About.js',
         home: './src/pages/Home.js',
     },
     plugins: [
