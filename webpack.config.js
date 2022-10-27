@@ -4,7 +4,7 @@ const StatoscopePlugin = require('@statoscope/webpack-plugin').default;
 const ProvidePlugin = require('webpack').ProvidePlugin;
 
 const config = {
-    mode: "development",
+    mode: "production",
     target: "web",
     entry: {
         index: "./src/index.js",
