@@ -1,5 +1,7 @@
-/** @license React v16.13.1
- * react-is.production.min.js
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/** @license React v0.20.2
+ * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
