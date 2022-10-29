@@ -1,5 +1,6 @@
 {
     "name": "unit-demo-cra",
+    "sideEffects": false,
     "version": "0.1.0",
     "homepage": "https://mixelte.github.io/shri_simple_template/",
     "private": true,
