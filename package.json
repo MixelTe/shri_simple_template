@@ -25,7 +25,7 @@
         "lint:js": "npx eslint ./src/",
         "lint:css": "npx stylelint \"./src/**/*.css\"",
         "analyze": "statoscope serve stats.json -o",
-        "validate": "node_modules/.bin/statoscope validate -i stats.json --config=./statoscope.config.js",
+        "validate": "statoscope validate -i stats.json --config=./statoscope.config.js",
         "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
